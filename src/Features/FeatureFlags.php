@@ -13,7 +13,7 @@ class FeatureFlags
 {
 	private const CACHE_KEY = "21torr.feature-flags";
 
-	/** @var array<string,bool>|null  */
+	/** @var array<string,bool>|null */
 	private ?array $flags = null;
 	private FeaturesFileLoader $featuresFileLoader;
 	private CacheInterface $cache;

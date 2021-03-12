@@ -7,8 +7,6 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
 
-use function PHPUnit\Framework\containsEqual;
-
 /**
  * @final
  */
