@@ -2,7 +2,7 @@
 	"name": "21torr/feature-flags",
 	"type": "symfony-bundle",
 	"description": "Bundle for handling feature flags.",
-	"homepage": "https://github.com/21TORR/features-flags-bundle",
+	"homepage": "https://github.com/21TORR/feature-flags-bundle",
 	"license": "MIT",
 	"authors": [
 		{
