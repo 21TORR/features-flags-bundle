@@ -1,0 +1,54 @@
+{
+	"name": "21torr/feature-flags",
+	"type": "symfony-bundle",
+	"description": "Bundle for handling feature flags.",
+	"homepage": "https://github.com/21TORR/feature-flags-bundle",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "21TORR",
+			"homepage": "https://www.21torr.com/"
+		}
+	],
+	"require": {
+		"php": "^7.4 || ^8.0",
+		"21torr/bundle-helpers": "^2.1",
+		"psr/log": "^1.1",
+		"symfony/cache-contracts": "^2.2",
+		"symfony/config": "^5.2",
+		"symfony/dependency-injection": "^5.2",
+		"symfony/yaml": "^5.2",
+		"twig/twig": "^3.3"
+	},
+	"require-dev": {
+		"bamarni/composer-bin-plugin": "^1.4",
+		"roave/security-advisories": "dev-master",
+		"symfony/phpunit-bridge": "^5.2"
+	},
+	"config": {
+		"sort-packages": true
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-next": "1.x-dev"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Torr\\FeatureFlags\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\Torr\\FeatureFlags\\": "tests/"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"@composer bin all install --ansi"
+		],
+		"post-update-cmd": [
+			"@composer bin all update --ansi"
+		]
+	}
+}
