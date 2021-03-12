@@ -1,0 +1,12 @@
+services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+
+    Torr\Features\:
+        resource: ../src/*
+        exclude: ../src/{Exception,AssetsBundle.php}
+
+
+    Torr\FeaturesFlags\Features\FeatureFlags:
+        $projectDir: '%kernel.project_dir%'
