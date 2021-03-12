@@ -13,6 +13,7 @@
 	"require": {
 		"php": "^7.4 || ^8.0",
 		"21torr/bundle-helpers": "^2.1",
+		"psr/log": "^1.1",
 		"symfony/cache-contracts": "^2.2",
 		"symfony/config": "^5.2",
 		"symfony/dependency-injection": "^5.2",
@@ -34,12 +35,12 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Torr\\FeaturesFlags\\": "src/"
+			"Torr\\FeatureFlags\\": "src/"
 		}
 	},
 	"autoload-dev": {
 		"psr-4": {
-			"Tests\\Torr\\FeaturesFlags\\": "tests/"
+			"Tests\\Torr\\FeatureFlags\\": "tests/"
 		}
 	},
 	"scripts": {

@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace Tests\Torr\FeaturesFlags\Twig;
 
 use PHPUnit\Framework\TestCase;
-use Torr\FeaturesFlags\Features\FeatureFlags;
-use Torr\FeaturesFlags\Twig\FeatureFlagsTwigExtension;
+use Torr\FeatureFlags\Features\FeatureFlags;
+use Torr\FeatureFlags\Twig\FeatureFlagsTwigExtension;
 use Twig\Environment;
 use Twig\Loader\ArrayLoader;
 

@@ -5,7 +5,7 @@ namespace Tests\Torr\FeaturesFlags\Features\Loader;
 
 use PHPUnit\Framework\TestCase;
 use Psr\Log\Test\TestLogger;
-use Torr\FeaturesFlags\Features\Loader\FeaturesFileLoader;
+use Torr\FeatureFlags\Features\Loader\FeaturesFileLoader;
 
 final class FeaturesFileLoaderTest extends TestCase
 {

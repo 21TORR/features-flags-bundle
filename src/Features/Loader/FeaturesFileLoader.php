@@ -1,11 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace Torr\FeaturesFlags\Features\Loader;
+namespace Torr\FeatureFlags\Features\Loader;
 
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Yaml\Exception\ParseException;
 use Symfony\Component\Yaml\Yaml;
+
+use function PHPUnit\Framework\containsEqual;
 
 /**
  * @final
@@ -44,14 +46,15 @@ class FeaturesFileLoader
 		try
 		{
 			$flags = Yaml::parseFile($projectDir);
+			$parsed = $this->parseRawFlags($flags);
 
-			if (!$this->isValid($flags))
+			if (null === $parsed)
 			{
 				$this->logger->error("Failed to parse feature flag files: invalid feature flags");
 				return [];
 			}
 
-			return $flags;
+			return $parsed;
 		}
 		catch (ParseException $exception)
 		{
@@ -66,23 +69,41 @@ class FeaturesFileLoader
 
 
 	/**
-	 * Checks whether the feature flags file is valid
+	 * Parses the raw flags
 	 */
-	private function isValid ($flags) : bool
+	private function parseRawFlags ($flags) : ?array
 	{
 		if (!\is_array($flags))
 		{
-			return false;
+			return null;
 		}
+
+		$parsed = [];
 
 		foreach ($flags as $key => $value)
 		{
-			if (!\is_string($key) || !\is_bool($value))
+			// invalid key: abort
+			if (!\is_string($key))
 			{
-				return false;
+				return null;
 			}
+
+			if (\is_bool($value))
+			{
+				$parsed[$key] = $value;
+				continue;
+			}
+
+			if ("off" === $value || "on" === $value)
+			{
+				$parsed[$key] = "on" === $value;
+				continue;
+			}
+
+			// abort, as no supported value
+			return null;
 		}
 
-		return true;
+		return $parsed;
 	}
 }

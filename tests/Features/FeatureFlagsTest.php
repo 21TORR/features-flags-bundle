@@ -5,8 +5,8 @@ namespace Tests\Torr\FeaturesFlags\Features;
 
 use PHPUnit\Framework\TestCase;
 use Symfony\Contracts\Cache\CacheInterface;
-use Torr\FeaturesFlags\Features\FeatureFlags;
-use Torr\FeaturesFlags\Features\Loader\FeaturesFileLoader;
+use Torr\FeatureFlags\Features\FeatureFlags;
+use Torr\FeatureFlags\Features\Loader\FeaturesFileLoader;
 
 final class FeatureFlagsTest extends TestCase
 {

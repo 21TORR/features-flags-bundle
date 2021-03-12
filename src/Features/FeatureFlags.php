@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace Torr\FeaturesFlags\Features;
+namespace Torr\FeatureFlags\Features;
 
 use Symfony\Contracts\Cache\CacheInterface;
-use Torr\FeaturesFlags\Features\Loader\FeaturesFileLoader;
+use Torr\FeatureFlags\Features\Loader\FeaturesFileLoader;
 
 /**
  * @final

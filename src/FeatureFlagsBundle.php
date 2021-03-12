@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Torr\FeaturesFlags;
+namespace Torr\FeatureFlags;
 
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;

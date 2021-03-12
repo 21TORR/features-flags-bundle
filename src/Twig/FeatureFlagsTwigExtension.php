@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Torr\FeaturesFlags\Twig;
+namespace Torr\FeatureFlags\Twig;
 
-use Torr\FeaturesFlags\Features\FeatureFlags;
+use Torr\FeatureFlags\Features\FeatureFlags;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 

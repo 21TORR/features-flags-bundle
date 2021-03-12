@@ -3,10 +3,12 @@ services:
         autoconfigure: true
         autowire: true
 
-    Torr\Features\:
+    Torr\FeatureFlags\:
         resource: ../src/*
         exclude: ../src/{Exception,AssetsBundle.php}
 
+    Torr\FeatureFlags\Features\FeatureFlags:
+        $isDebug: '%kernel.debug%'
 
-    Torr\FeaturesFlags\Features\FeatureFlags:
+    Torr\FeatureFlags\Features\Loader\FeaturesFileLoader:
         $projectDir: '%kernel.project_dir%'
