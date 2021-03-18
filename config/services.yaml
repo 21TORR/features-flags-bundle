@@ -12,3 +12,7 @@ services:
 
     Torr\FeatureFlags\Features\Loader\FeaturesFileLoader:
         $projectDir: '%kernel.project_dir%'
+
+    Torr\FeatureFlags\ExpressionLanguage\FeatureFlagsRoutingExpressionLanguageIntegration:
+        tags:
+            - { name: routing.expression_language_function, function: has_feature }
