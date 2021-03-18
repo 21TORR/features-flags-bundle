@@ -68,6 +68,8 @@ class FeaturesFileLoader
 
 	/**
 	 * Parses the raw flags
+	 *
+	 * @param mixed $flags
 	 */
 	private function parseRawFlags ($flags) : ?array
 	{
