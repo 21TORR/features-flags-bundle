@@ -57,4 +57,13 @@ class FeatureFlags
 	{
 		return $this->getFlags()[$flag] ?? false;
 	}
+
+
+	/**
+	 * @internal
+	 */
+	public function getAll () : array
+	{
+		return $this->getFlags();
+	}
 }

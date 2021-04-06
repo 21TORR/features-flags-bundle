@@ -1,3 +1,9 @@
+1.2.0
+=====
+
+*   (feature) Add `debug` console command.
+
+
 1.1.0
 =====
 
